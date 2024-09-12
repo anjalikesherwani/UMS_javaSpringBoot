@@ -10,29 +10,29 @@ import jakarta.persistence.Table;
 @Table(name = "users")
 public class User {
     @Id
-    private String id;
+    private String roll_no;
 
 
     @PrePersist
     private void ensureId() {
-        if (this.id == null) {
-            this.id = IdGenerator.generateId();
+        if (this.roll_no == null) {
+            this.roll_no = IdGenerator.generateId();
         }
     }
 
     // Getters and setters & constructor
     
 	public String getId() {
-		return id;
+		return roll_no;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setId(String roll_no) {
+		this.roll_no = roll_no;
 	}
 
-	public User(String id) {
+	public User(String roll_no) {
 		super();
-		this.id = id;
+		this.roll_no = roll_no;
 	}
 
   

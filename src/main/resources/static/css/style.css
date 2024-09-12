@@ -319,3 +319,137 @@ p {
 }
 
 /* instructor end  */
+
+/* architecture  */
+.architecture-courses {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.architecture-courses h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.architecture-courses h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #444;
+}
+
+.architecture-courses p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.architecture-courses ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.architecture-courses ul li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.college-table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.college-table th,
+.college-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.college-table th {
+    background-color: #90C3C8;
+    color: #ffffff;
+}
+
+.college-table td a {
+    color: #0099CC;
+    text-decoration: none;
+}
+
+.college-table td a:hover {
+    text-decoration: underline;
+}
+
+.ug-architecture-courses {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ug-architecture-courses h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.ug-architecture-courses ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+}
+
+.ug-architecture-courses ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #666;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #00496f;
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+sup {
+    font-size: 12px;
+}
+/* architecture end  */
+
+
+/*math*/
+
