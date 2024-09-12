@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<haed>
+		<meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <title>University Management System</title>
+		    <!-- Bootstrap CSS -->
+		    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		    <!-- for soccial media logo -->
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		    <!-- social media logo end  -->
+		    <link rel="stylesheet" href="style.css">
+		    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+	</haed>
+	<body>
+		<!--nav section-->
+			
+			<div th:include="nav.html"></div>
+			
+			<!--nav section end-->
+			
+			<!-- about  section  -->
+			<!-- about section part 1 -->
+			<div class="container mt-4 mb-4">
+			    <div style="text-align: center;">
+			        <h1
+			            style="color: rgb(67, 10, 253); font-weight: bold; border-bottom: 2px dashed rgb(67, 10, 253); display: inline-block; padding-bottom: 5px;">
+			            About
+			        </h1>
+			    </div>
+			    <div class="d-flex justify-content-around align-items-center">
+			        <div class="me-4 ">
+			            <img class="border border-2" src="images/about.jpg" alt="img"
+			                style="height:500px; width:700px; border-radius: 10px;">
+			        </div>
+			        <div class="text-center">
+			            <h1 style="color: black;">University Management System</h1>
+			            <p style="color: black;">
+			                Welcome to the University Management System (UMS), your comprehensive solution for efficient and
+			                streamlined university administration. UMS is designed to cater to the diverse needs of
+			                universities, colleges, and educational institutions, providing an integrated platform that
+			                simplifies and enhances the management of academic and administrative processes.
+			                <br>
+			                At its core, UMS aims to simplify the management of various institutional functions, ensuring that
+			                universities can focus on what truly matters: providing quality education. With features that
+			                support everything from admissions to graduation, UMS empowers institutions to operate more
+			                efficiently, make data-driven decisions, and enhance the overall experience for students, faculty,
+			                and staff.
+			            </p>
+			        </div>
+
+			    </div>
+			</div>
+			<!-- about section part 1 end -->
+			<!-- about section part 2 -->
+
+			<div
+			    style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; display: flex; align-items: center;">
+			    <!-- Text Section -->
+			    <div style="flex: 1;">
+			        <h4
+			            style="color: red; font-weight: bold; border-bottom: 2px dashed red; display: inline-block; padding-bottom: 5px;">
+			            WHY CHOOSE US?</h4>
+			        <h1 style="font-size: 36px; color: #1a1a1a; font-weight: 700; margin-top: 10px;">Why You Should Start
+			            Learning
+			            with Us?</h1>
+			        <p style="font-size: 16px; color: #666; line-height: 1.8; margin-top: 20px;">
+			            Our University Management System offers a holistic and innovative approach to education, designed to
+			            meet
+			            the needs of students, faculty, and administration alike. With state-of-the-art features, our platform
+			            ensures that students can access world-class resources, and educators can manage their courses and
+			            students
+			            with ease. Join us to experience an educational journey like no other.
+			        </p>
+
+			        <!-- Feature List -->
+			        <div style="margin-top: 30px;">
+			            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+			                <div
+			                    style="width: 50px; height: 50px; background-color: #007bff; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 15px;">
+			                    <span style="font-size: 24px;">🎓</span>
+			                </div>
+			                <div>
+			                    <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #1a1a1a;">Skilled Instructors
+			                    </h3>
+			                    <p style="margin: 5px 0 0; color: #666;">Our platform features instructors with extensive
+			                        knowledge
+			                        and experience, ensuring you receive the best education possible.</p>
+			                </div>
+			            </div>
+			            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+			                <div
+			                    style="width: 50px; height: 50px; background-color: #dc3545; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 15px;">
+			                    <span style="font-size: 24px;">🌍</span>
+			                </div>
+			                <div>
+			                    <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #1a1a1a;">International
+			                        Certificate
+			                    </h3>
+			                    <p style="margin: 5px 0 0; color: #666;">Earn a globally recognized certificate that will open
+			                        doors
+			                        to opportunities worldwide.</p>
+			                </div>
+			            </div>
+			            <div style="display: flex; align-items: center; margin-bottom: 20px;">
+			                <div
+			                    style="width: 50px; height: 50px; background-color: #ffc107; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 15px;">
+			                    <span style="font-size: 24px;">💻</span>
+			                </div>
+			                <div>
+			                    <h3 style="margin: 0; font-size: 20px; font-weight: 700; color: #1a1a1a;">Online Classes</h3>
+			                    <p style="margin: 5px 0 0; color: #666;">Access your classes from anywhere, at any time, making
+			                        learning flexible and convenient for you.</p>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+
+			    <!-- Image Section -->
+			    <div style="flex: 1; padding-left: 40px;">
+			        <img src="images/feature.jpg" alt="Student Image" style="width: 100%; border-radius: 10px;">
+			    </div>
+			</div>
+
+
+
+			<!-- about section part 2 end -->
+
+
+			<!-- about section end -->
+
+
+			  <!-- Footer -->
+
+			<div th:insert="footer.html"></div>
+
+			  <!-- Footer end -->
+
+
+
+			  <!-- Bootstrap JS Bundle (including Popper.js) -->
+			  <!-- navbar script -->
+			  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+			  <!-- navbar script end -->
+	</body>
+</html>

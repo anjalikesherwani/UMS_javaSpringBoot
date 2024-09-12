@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for soccial media logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- social media logo end  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body
+    style="background-image: url('https://img.freepik.com/premium-photo/graduate-hat-modern-digital-style-graduation-cap-dark-blue-background-education-concept_666034-81.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh; margin: 0;">
+
+    <!-- navbar section  -->
+
+	<div th:include="nav.html"></div>
+	
+    <!-- navbar section end  -->
+    <!-- content of details -->
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #3e3c3c; padding: 10px 15px;">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin"
+                            style="color: rgb(40, 149, 251) !important; font-weight: 500; text-decoration: none; margin-right: 15px;">
+                            Check Leaves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="paid_fees"
+                            style="color: rgb(255, 255, 255) !important; font-weight: 700; text-decoration: underline; background-color: rgba(40, 149, 251, 0.2); border-radius: 5px; margin-right: 15px;">
+                            Submitted Fees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="student_progress"
+                            style="color: rgb(40, 149, 251) !important; font-weight: 500; text-decoration: none; margin-right: 15px;">Student
+                            Progress</a>
+                    </li>
+                </ul>
+                <div class="nav-profile d-flex align-items-center" style="color: white; font-weight: 600;">
+                    <img src="https://via.placeholder.com/30" alt="User"
+                        style="border-radius: 50%; height: 30px; margin-right: 5px;">
+                    Admin
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end  -->
+    <!-- body section -->
+
+    <div
+        style="max-width: 600px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; margin-bottom: 20px;">Check Fees Submission Status</h2>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="flex: 1; margin-right: 10px;">
+                <label for="rollNumber">Roll Number:</label>
+                <input type="text" id="rollNumber" name="rollNumber"
+                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 1;">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName"
+                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="flex: 1; margin-right: 10px;">
+                <label for="course">Course:</label>
+                <input type="text" id="course" name="course"
+                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 1;">
+                <label for="semester">Semester:</label>
+                <input type="text" id="semester" name="semester"
+                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <div style="flex: 1; margin-right: 10px;">
+                <label for="feesStatus">Fees Status:</label>
+                <input type="text" id="feesStatus" name="feesStatus"
+                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+            <div style="flex: 1;">
+                <label for="paymentDate">Payment Date:</label>
+                <input type="text" id="paymentDate" name="paymentDate" placeholder="dd-mm-yyyy"
+                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between;">
+            <button type="submit"
+                style="flex: 1; padding: 10px; margin-right: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                Check Fees Status
+            </button>
+            <button type="button"
+                style="flex: 1; padding: 10px; background-color: #6c757d; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                Back
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <!-- body section end  -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- content of details end-->
+
+
+
+
+
+    <!-- Footer -->
+    
+	<div th:insert="footer.html"></div>
+	
+    <!-- Footer end -->
+
+    <!-- Bootstrap JS Bundle (including Popper.js) -->
+    <!-- navbar script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- navbar script end -->
+</body>
+
+</html>

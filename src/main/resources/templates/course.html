@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for soccial media logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- social media logo end  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+	<div th:include="nav.html"></div>
+
+    <!-- course  -->
+    <div class="container-fluid" style="padding: 2rem 0;">
+        <div class="container" style="padding: 2rem 0;">
+            <div class="row mx-0 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center position-relative" style="margin-bottom: 5rem;">
+                        <h4
+                            style="color: rgb(67, 10, 253); font-weight: bold; border-bottom: 2px dashed rgb(67, 10, 253); display: inline-block; padding-bottom: 5px;">
+                            Courses
+                        </h4>
+                        <h1 class="display-4" style="color: #252525; font-weight: 800;">Checkout New Releases Of Our
+                            Courses</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co1.webp" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Architecture</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co2.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Biology</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co3.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Computer Science and
+                                Engineering (CSE)</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co4.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">DevOps (CSE)</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co5.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Fashion Design</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co6.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Law</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co7.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Mathematics</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co8.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Multimedia & Animation,
+                                Gaming, Graphics & UI/UX</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-4">
+                    <a class="courses-list-item position-relative d-block overflow-hidden mb-2" href="detail.html"
+                        style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; position: relative;">
+                        <img class="img-fluid" src="images/co9.jpg" alt=""
+                            style="width: 100%; height: auto; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                        <div class="courses-text"
+                            style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 15px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; text-align: center; position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box;">
+                            <h4 class="text-center text-white px-3" style="font-size: 1.25rem;">Physical Education</h4>
+                            <div class="border-top w-100 mt-3" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        .courses-list-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+        }
+
+        .courses-list-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .courses-list-item:hover .courses-text {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+    <!-- Courses End -->
+
+	<div th:insert="footer.html"></div>
+
+    <!-- Bootstrap JS Bundle (including Popper.js) -->
+    <!-- navbar script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- navbar script end -->
+</body>
+
+</html>

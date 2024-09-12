@@ -1,0 +1,321 @@
+/* Carousel  */
+
+.carousel-inner img {
+    height: 600px;
+    object-fit: cover;
+}
+
+/* carousel end  */
+
+
+
+
+
+
+/* team  */
+#meet-our-team {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+#team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member-card {
+    position: relative;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.team-member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 5px;
+    text-align: center;
+}
+
+.card-details {
+    display: none;
+    padding: 15px;
+    background: #fafafa;
+    border-top: 2px solid #ddd;
+    text-align: center;
+}
+
+.team-member-card:hover .card-details {
+    display: block;
+}
+
+.card-details a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-details a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member-card {
+        width: 90%;
+    }
+}
+
+/* icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* Center align icons horizontally */
+    gap: 15px;
+    /* Space between icons */
+    margin: 20px 0;
+    /* Space above and below icons */
+}
+
+.social-icons a {
+    color: #333;
+    /* Default icon color */
+    font-size: 24px;
+    /* Size of the icons */
+    text-decoration: none;
+    /* Remove underline from links */
+    transition: color 0.3s, transform 0.3s;
+    /* Smooth color and transform transitions */
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge icons on hover */
+}
+
+/* team end  */
+
+
+
+/* testimonial */
+.testimonial-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.testimonial-text {
+    width: 45%;
+}
+
+.testimonial-title {
+    color: #3523d5;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.testimonial-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.testimonial-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.testimonial-carousel {
+    width: 45%;
+    background-color: #f0f4ff;
+    padding: 1px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-item {
+    min-width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+.testimonial-item.active {
+    display: flex;
+}
+
+.testimonial-item.active p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.testimonial-quote {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.student-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 40%;
+}
+
+.student-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.student-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.student-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.student-course {
+    font-size: 14px;
+    color: #888;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+}
+
+.prev-btn,
+.next-btn {
+    pointer-events: auto;
+    background-color: #ff3f3f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn {
+    background-color: #5e87ff;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    opacity: 0.8;
+}
+
+/* testimonial ends  */
+
+
+/* instructor  */
+
+.instructor-item {
+    background-color: #f8f9fa;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.instructor-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.instructor-item:hover {
+    transform: scale(1.05);
+    background-color: #e9ecef;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.instructor-item:hover img {
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: #007bff;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0056b3;
+}
+
+/* instructor end  */
