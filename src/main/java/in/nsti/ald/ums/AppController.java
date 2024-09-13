@@ -1,6 +1,9 @@
 package in.nsti.ald.ums;
 
 import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;*/
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class AppController {
 	
 	@Autowired
-	private StudentService studentService;
+	private StudentService studentSrevice;
 	
 	
 	@GetMapping("/")
@@ -76,16 +79,16 @@ public class AppController {
 	
 	@GetMapping("/signup")
 	public String signup(Model model) {
-		Student student = new Student();
+		Student student= new Student();
 		model.addAttribute("student",student);
-		return "signup";
+		return "signup";	
 	}
 	
 	@PostMapping("saveStudent")
-	public String saveStudent(@ModelAttribute("student") Student student) {
-		studentService.saveStudent(student);
-		return "student";
-	}
+	public String saveStudent(Student student) {
+        studentService.saveStudent(student);  // this will avoid the null pointer issue
+        return "redirect:/students";
+    }
   	
 	@GetMapping("/student")
 	public String student() {
@@ -117,6 +120,48 @@ public class AppController {
 		return "student_progress";
 	}
 	
+	@GetMapping("/Architecture")
+	public String Architecture() {
+		return "Architecture";
+	}
 	
+	@GetMapping("/Biology")
+	public String Biology() {
+		return "Biology";
+	}
 	
+	@GetMapping("/CSE")
+	public String CSE() {
+		return "CSE";
+	}
+	
+	@GetMapping("/devops")
+	public String devops() {
+		return  "devops";
+	}
+	
+	@GetMapping("/fashion")
+	public String fashion() {
+		return "fashion";
+	}
+	
+	@GetMapping("/law")
+	public String law() {
+		return "law";
+	}
+	
+	@GetMapping("/math")
+	public String math() {
+		return "math";
+	}
+	
+	@GetMapping("/PhysicalEducation")
+	public String PhysicalEducation() {
+		return "PhysicalEducation";
+	}
+	
+	@GetMapping("/uiUx")
+	public String uiUx() {
+		return "uiUx";
+	}
 }

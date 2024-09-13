@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for soccial media logo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- social media logo end  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<!--nav section-->
+
+<div th:include="nav.html"></div>
+
+<!--nav section end-->
+
+<body>
+    <div style="width: 80%; margin: 0 auto;">
+        <!-- Master of Technology (MTech) Information -->
+        <div class="container">
+            <header>
+                <h1 style="text-align: center;">Master of Technology</h1>
+            </header>
+            <section class="description">
+                <p style="text-align: justify;">The M.Tech program generally lasts 2 years and involves advanced study
+                    in specialized areas of technology, often requiring a strong background in mathematics and
+                    engineering principles. Admission usually involves qualifying exams like GATE (Graduate Aptitude
+                    Test in Engineering) and meeting specific eligibility criteria set by universities.</p>
+            </section>
+            <table style="width: 70%; border-collapse: collapse; margin: 20px auto;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">Course Name</th>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">MTech</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Course Duration</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">2-year</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Admission Process</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Merit/Entrance</td>
+                    </tr>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Eligibility</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">12th passed</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Average Annual Fees</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">INR 50,000 - 4 Lakhs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- UG Mathematics Course Eligibility -->
+        <div class="container">
+            <header>
+                <h1 style="text-align: center;">UG Mathematics Course: Eligibility</h1>
+            </header>
+            <section class="description">
+                <p style="text-align: justify;">To be eligible to pursue undergraduate mathematics courses, candidates
+                    must have passed their 10+2 with at least 50% marks. In the case of merit-based admission,
+                    candidates must score at least 80-90% marks to be eligible for admission to a top college. For a BSc
+                    in mathematics, a minimum of 50% is required in mathematics or in aggregate in 10+2 with Physics,
+                    Chemistry, and Mathematics. Students interested in BA in mathematics must pass 10+2 either in
+                    science or commerce with mathematics (as a compulsory subject) with at least 45% marks.</p>
+            </section>
+            <table style="width: 70%; border-collapse: collapse; margin: 20px auto;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">Course Name</th>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">BA Mathematics & BSc
+                            Mathematics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Course Duration</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">3-year</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Admission Process</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Merit/Entrance</td>
+                    </tr>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Eligibility</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">12th Pass with mathematics</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Average Annual Fees</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">INR 3,000 to INR 1,00,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Postgraduate Mathematics Courses -->
+        <div class="container">
+            <header>
+                <h1 style="text-align: center;">Postgraduate Mathematics Courses</h1>
+            </header>
+            <section class="description">
+                <p style="text-align: justify;">MA or MSc in Mathematics is a 2-year program that provides in-depth
+                    knowledge of Mathematics. The program includes advanced concepts like number theory, calculus,
+                    differential equations, etc. Admission to MSc in Mathematics usually requires qualifying entrance
+                    exams conducted by various universities/colleges.</p>
+            </section>
+            <table style="width: 70%; border-collapse: collapse; margin: 20px auto;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">Course Name</th>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">MSc Mathematics & MA
+                            Mathematics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Course Duration</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">2-year</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Admission Process</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Merit/Entrance</td>
+                    </tr>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Eligibility</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Graduation in Mathematics</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Average Annual Fees</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">INR 30,000 - INR 4,00,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Doctoral Mathematics Courses -->
+        <div class="container">
+            <header>
+                <h1 style="text-align: center;">Doctoral Mathematics Courses</h1>
+            </header>
+            <section class="description">
+                <p style="text-align: justify;">A Ph.D. in Mathematics offers a wide range of opportunities to build a
+                    career. Students will enhance their research skills and deepen their knowledge in the field of
+                    mathematics. Typically, it takes 3-5 years to complete a Ph.D. in Mathematics. After completion,
+                    career options include roles in research, development, banking, business, statistics, and more.</p>
+            </section>
+            <table style="width: 70%; border-collapse: collapse; margin: 20px auto;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">Course Name</th>
+                        <th style="background-color: #e8e8e8; padding: 10px; text-align: left;">Ph.D. in Mathematics
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Course Duration</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">3-5 years</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Admission Process</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">UGC NET or CSIR UGC NET</td>
+                    </tr>
+                    <tr style="background-color: #fbeff4;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Eligibility</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Postgraduate in Mathematics</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 10px; border: 1px solid #ddd;">Average Annual Fees</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">INR 20,000 - 3,00,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<!-- Footer -->
+
+<div th:insert="footer.html"></div>
+
+<!-- Footer end -->
+<!-- Bootstrap JS Bundle (including Popper.js) -->
+<!-- navbar script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- navbar script end -->
+
+</html>
