@@ -83,7 +83,7 @@ public class AppController {
 		model.addAttribute("student",student);
 		return "signup";	
 	}
-	
+	 
 	@PostMapping("saveStudent")
 	public String saveStudent(Student student) {
         studentService.saveStudent(student);  // this will avoid the null pointer issue
