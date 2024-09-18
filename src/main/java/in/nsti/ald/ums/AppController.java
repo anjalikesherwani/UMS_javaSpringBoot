@@ -16,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class AppController {
 	
 	@Autowired
-	private StudentService studentSrevice;
+	private StudentService studentService;
 	
 	
 	@GetMapping("/")
@@ -87,7 +87,7 @@ public class AppController {
 	@PostMapping("saveStudent")
 	public String saveStudent(Student student) {
         studentService.saveStudent(student);  // this will avoid the null pointer issue
-        return "redirect:/students";
+        return "redirect:/student";
     }
   	
 	@GetMapping("/student")
@@ -164,4 +164,6 @@ public class AppController {
 	public String uiUx() {
 		return "uiUx";
 	}
+	
+	
 }
