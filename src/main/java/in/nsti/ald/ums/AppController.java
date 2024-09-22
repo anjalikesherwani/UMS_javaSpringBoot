@@ -18,6 +18,8 @@ public class AppController {
 	@Autowired
 	private StudentService studentService;
 	
+	@Autowired
+    private LeaveRepository leaveRepository;
 	
 	@GetMapping("/")
 	public String home() {
@@ -96,10 +98,23 @@ public class AppController {
 	}
 	
 	@GetMapping("/studentDetail")
-	public String StudentDetail() {
-		return "StudentDetail";
+	public String showLeaveForm(Model model) {
+        model.addAttribute("leave", new Leave());
+        return "studentDetail";  // Corresponds to the Thymeleaf template
 	}
 	
+	@PostMapping("/applyLeave")
+    public String applyLeave(@ModelAttribute("leave") Leave leave, Model model) {
+        leave.setStatus("Leave Applied");  // Update status upon applying
+        leaveRepository.save(leave);
+        
+        model.addAttribute("message", "Leave Applied Successfully!");
+        model.addAttribute("leave", leave);
+        
+        return "leaveStatus";  // Redirect to a status page
+    }
+	
+
 	@GetMapping("/admin")
 	public String admin() {
 		return "admin";
