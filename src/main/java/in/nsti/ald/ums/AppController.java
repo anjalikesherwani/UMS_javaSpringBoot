@@ -1,6 +1,7 @@
 package in.nsti.ald.ums;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.error.ErrorController;
 /*import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;*/
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -60,10 +62,7 @@ public class AppController {
 		return "testimonial";
 	}
 	
-	@GetMapping("/fees")
-	public String fees() {
-		return "fees";
-	}
+	
 	
 	@GetMapping("/myprogress")
 	public String myprogress() {
@@ -114,7 +113,36 @@ public class AppController {
         return "leaveStatus";  // Redirect to a status page
     }
 	
+	
+	@GetMapping("/fees")
+	public String fees() {
+		return "fees";
+	}
 
+	@PostMapping("/fees")
+	public String fees(@RequestParam("rollno") String rollno,
+	                         @RequestParam("name") String name,
+	                         @RequestParam("course") String course,
+	                         @RequestParam("branch") String branch,
+	                         @RequestParam("semester") String semester,
+	                         @RequestParam("amount") String amount, 
+	                         Model model) {
+	    // Debugging log
+	    System.out.println("POST /fees invoked");
+	    
+	    System.out.println("Roll No: " + rollno);
+	    System.out.println("Name: " + name);
+	    System.out.println("Course: " + course);
+	    System.out.println("Branch: " + branch);
+	    System.out.println("Semester: " + semester);
+	    System.out.println("Amount: " + amount); 
+
+	    model.addAttribute("message", "Fees payment submitted successfully!");
+	    return "studentDetail";
+	}
+	
+
+	
 	@GetMapping("/admin")
 	public String admin() {
 		return "admin";
