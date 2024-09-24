@@ -23,6 +23,10 @@ public class AppController {
 	@Autowired
     private LeaveRepository leaveRepository;
 	
+	 @Autowired
+	 private FeesRepository feesRepository;  // Injecting the FeesRepository
+
+	
 	@GetMapping("/")
 	public String home() {
 		
@@ -110,36 +114,29 @@ public class AppController {
         model.addAttribute("message", "Leave Applied Successfully!");
         model.addAttribute("leave", leave);
         
-        return "leaveStatus";  // Redirect to a status page
+        return "redirect:/index";  // Redirect to a status page
     }
 	
 	
 	@GetMapping("/fees")
-	public String fees() {
-		return "fees";
+	public String showFeesForm(Model model) {
+        model.addAttribute("fees", new Fees());  // Add an empty Fees object to the model
+        return "fees";  // Return the Thymeleaf template for the form
 	}
 
 	@PostMapping("/fees")
-	public String fees(@RequestParam("rollno") String rollno,
-	                         @RequestParam("name") String name,
-	                         @RequestParam("course") String course,
-	                         @RequestParam("branch") String branch,
-	                         @RequestParam("semester") String semester,
-	                         @RequestParam("amount") String amount, 
-	                         Model model) {
-	    // Debugging log
-	    System.out.println("POST /fees invoked");
-	    
-	    System.out.println("Roll No: " + rollno);
-	    System.out.println("Name: " + name);
-	    System.out.println("Course: " + course);
-	    System.out.println("Branch: " + branch);
-	    System.out.println("Semester: " + semester);
-	    System.out.println("Amount: " + amount); 
-
-	    model.addAttribute("message", "Fees payment submitted successfully!");
-	    return "studentDetail";
-	}
+	public String submitFees(@ModelAttribute("fees") Fees fees, Model model) {
+		
+		System.out.println("Amount: " + fees.getAmount());  // Debugging to check value
+		
+		fees.setStatus("Fees Submitted");  // Set status after submission
+        feesRepository.save(fees);  // Save the fees record to the database
+        
+        model.addAttribute("message", "Fees Submitted Successfully!");  // Success message
+        model.addAttribute("fees", fees);  // Add the updated fees object to the model
+        
+        return "redirect:/index";  // Redirect to a status page or display the result
+    }
 	
 
 	

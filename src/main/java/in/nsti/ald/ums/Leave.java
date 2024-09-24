@@ -13,67 +13,82 @@ import java.time.LocalDate;
 @Table(name = "`leave`")
 public class Leave {
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-    private String rollNumber;
+    private String rollno;
     private LocalDate date;
-    private String leaveType;
+    private String time;
     private String status;
 
     // No-argument constructor
     public Leave() {
     }
 
+    
     // Constructor with fields (if needed)
-    public Leave(String rollNumber, LocalDate date, String leaveType, String status) {
-        this.rollNumber = rollNumber;
-        this.date = date;
-        this.leaveType = leaveType;
-        this.status = status;
-    }
+	public Leave(Long id, String rollno, LocalDate date, String time, String status) {
+		super();
+		this.id = id;
+		this.rollno = rollno;
+		this.date = date;
+		this.time = time;
+		this.status = status;
+	}
 
-    // Getters and Setters
+	//Getter & Setter
+	public Long getId() {
+		return id;
+	}
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getRollNumber() {
-        return rollNumber;
-    }
 
-    public void setRollNumber(String rollNumber) {
-        this.rollNumber = rollNumber;
-    }
+	public String getRollno() {
+		return rollno;
+	}
 
-    public LocalDate getDate() {
-        return date;
-    }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
+	public void setRollno(String rollno) {
+		this.rollno = rollno;
+	}
 
-    public String getLeaveType() {
-        return leaveType;
-    }
 
-    public void setLeaveType(String leaveType) {
-        this.leaveType = leaveType;
-    }
+	public LocalDate getDate() {
+		return date;
+	}
 
-    public String getStatus() {
-        return status;
-    }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+
+	public String getTime() {
+		return time;
+	}
+
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	
+	
+  
+
 }
