@@ -54,15 +54,18 @@
     </nav>
     <!-- navbar end  -->
     <!-- body section -->
-
+	<form  action="/paidFees" method="post" >
     <div
         style="max-width: 600px; margin: 50px auto; padding: 20px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);">
         <h2 style="text-align: center; margin-bottom: 20px;">Check Fees Submission Status</h2>
 
         <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+			
+		
+				                
             <div style="flex: 1; margin-right: 10px;">
                 <label for="rollNumber">Roll Number:</label>
-                <input type="text" id="rollNumber" name="rollNumber"
+                <input type="text" id="rollNumber" name="rollNumber" required
                     style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
             </div>
             <div style="flex: 1;">
@@ -85,19 +88,25 @@
             </div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-            <div style="flex: 1; margin-right: 10px;">
-                <label for="feesStatus">Fees Status:</label>
-                <input type="text" id="feesStatus" name="feesStatus"
-                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-            </div>
-            <div style="flex: 1;">
-                <label for="paymentDate">Payment Date:</label>
-                <input type="text" id="paymentDate" name="paymentDate" placeholder="dd-mm-yyyy"
-                    style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-            </div>
-        </div>
+		<div style="flex: 1; min-width: 45%; ">
+			<label for="feesStatus">Fees Status:</label>
+					<select id="feesStatus" name="feesStatus" required
+						  style="width: 100%; padding: 8px; border: 1px solid #ccc; 
+						  border-radius: 5px; box-sizing: border-box;">
+			<option value="" disabled selected>Select fees type</option>
+	 		<option value="Submitted">Submitted</option>
+	 		<option value="Not Submitted">Not Submitted</option>
+				</select>
+			</div>
+					<div style="flex: 1; min-width: 45%;">
+						<label for="date">Date:</label>
+						<input type="date" id="date" name="date" required
+					 		style="width: 100%; padding: 8px; border: 1px solid #ccc; 
+							border-radius: 5px;">
+						</div>						
 
+
+				     
         <div style="display: flex; justify-content: space-between;">
             <button type="submit"
                 style="flex: 1; padding: 10px; margin-right: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
@@ -111,7 +120,7 @@
     </div>
 
 
-
+</form>
 
     <!-- body section end  -->
     <!-- Bootstrap JS -->

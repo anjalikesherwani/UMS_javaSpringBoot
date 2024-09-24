@@ -29,6 +29,10 @@ public class AppController {
 	 @Autowired
 	 private checkLeavesReopsitory checkleavesReopsitory;   // Injecting the checkleavesRepository
 	
+	 @Autowired
+	 private PaidFeesRepository paidfeesRepository;   // Injecting the paidfeesRepository
+	 
+	 
 	@GetMapping("/")
 	public String home() {
 		
@@ -162,9 +166,22 @@ public class AppController {
 	}
 
 	@GetMapping("/paid_fees")
-	public String paid_fees() {
+	public String showPaidFeesForm(Model model) {
+        model.addAttribute("paidfees", new PaidFees());
 		return "paid_fees";
 	}
+	
+	@PostMapping("/paidFees")
+	public String paidFees(@ModelAttribute("paidfees")PaidFees paidfees, Model model) {
+		paidfeesRepository.save(paidfees);
+		
+		model.addAttribute("message", "Fees submitted Successfully!");
+		model.addAttribute("paidfees", paidfees);
+		
+		return "redirect:/index";
+	}
+	
+	
 
 	@GetMapping("/student_progress")
 	public String student_progress() {
