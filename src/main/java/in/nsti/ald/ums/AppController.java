@@ -18,14 +18,16 @@ import jakarta.servlet.http.HttpServletRequest;
 public class AppController {
 	
 	@Autowired
-	private StudentService studentService;
+	private StudentService studentService;  
 	
 	@Autowired
-    private LeaveRepository leaveRepository;
+    private LeaveRepository leaveRepository;  // Injecting the leaveRepository
 	
 	 @Autowired
 	 private FeesRepository feesRepository;  // Injecting the FeesRepository
 
+	 @Autowired
+	 private checkLeavesReopsitory checkleavesReopsitory;   // Injecting the checkleavesRepository
 	
 	@GetMapping("/")
 	public String home() {
@@ -138,16 +140,25 @@ public class AppController {
         return "redirect:/index";  // Redirect to a status page or display the result
     }
 	
-
-	
-	@GetMapping("/admin")
-	public String admin() {
-		return "admin";
-	}
-
 	@GetMapping("/admin_login")
 	public String admin_login() {
 		return "admin_login";
+	}
+	
+	@GetMapping("/admin")
+	public String showCheckLeavesForm(Model model) {
+        model.addAttribute("checkleaves", new CheckLeaves());
+		return "admin";
+	}
+
+	@PostMapping("/checkLeaves")
+	public String checkLeave(@ModelAttribute("checkleaves") CheckLeaves checkleaves, Model model) {
+        checkleavesReopsitory.save(checkleaves);
+        
+        model.addAttribute("message", "Leave Applied Successfully!");
+        model.addAttribute("checkleaves", checkleaves);
+        
+        return "redirect:/index";  // Redirect to a status page
 	}
 
 	@GetMapping("/paid_fees")
