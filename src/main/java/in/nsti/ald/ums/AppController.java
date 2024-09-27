@@ -1,5 +1,7 @@
 package in.nsti.ald.ums;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 /*import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -72,16 +74,7 @@ public class AppController {
 		return "testimonial";
 	}
 	
-	
-	
-	@GetMapping("/myprogress")
-	public String myprogress() {
-		return "myprogress";
-	}
-	@GetMapping("/result")
-	public String result() {
-		return "result";
-	}
+
 	
 	@GetMapping("/feature")
 	public String feature() {
@@ -181,12 +174,20 @@ public class AppController {
 		return "redirect:/index";
 	}
 	
-	
-
 	@GetMapping("/student_progress")
 	public String student_progress() {
-		return "student_progress";
+		return "myprogress";
+	}	
+	@GetMapping("/myprogress")
+	public String myprogress() {
+		return "myprogress";
 	}
+	
+	@GetMapping("/result")
+	public String result() {
+		return "result";
+	}
+	
 	
 	@GetMapping("/Architecture")
 	public String Architecture() {
