@@ -12,6 +12,154 @@
     <!-- social media logo end  -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+	
+	<style>
+		/* testimonial */ 
+		.testimonial-section { 
+		    display: flex; 
+		    justify-content: space-between; 
+		    align-items: flex-start; 
+		    padding: 50px; 
+		    background-color: white; 
+		    margin-left: 100px; 
+		    margin-right: 100px; 
+		} 
+		 
+		.testimonial-text { 
+		    width: 45%; 
+		} 
+		 
+		.testimonial-title { 
+		    color: #3523d5; 
+		    font-size: 16px; 
+		    text-transform: uppercase; 
+		    letter-spacing: 2px; 
+		    margin-bottom: 10px; 
+		} 
+		 
+		.testimonial-heading { 
+		    font-size: 36px; 
+		    font-weight: bold; 
+		    margin-bottom: 20px; 
+		    color: #222; 
+		} 
+		 
+		.testimonial-description { 
+		    font-size: 16px; 
+		    color: #555; 
+		    line-height: 1.8; 
+		} 
+		 
+		.testimonial-carousel { 
+		    width: 45%; 
+		    background-color: #f0f4ff; 
+		    padding: 1px; 
+		    border-radius: 10px; 
+		    position: relative; 
+		    overflow: hidden; 
+		    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+		} 
+		 
+		.carousel-wrapper { 
+		    display: flex; 
+		    transition: transform 0.5s ease-in-out; 
+		} 
+		 
+		.testimonial-item { 
+		    min-width: 100%; 
+		    display: none; 
+		    flex-direction: column; 
+		    align-items: flex-start; 
+		    margin-top: 25px; 
+		} 
+		 
+		.testimonial-item.active { 
+		    display: flex; 
+		} 
+		 
+		.testimonial-item.active p { 
+		    margin-left: 20px; 
+		    margin-right: 20px; 
+		} 
+		 
+		.testimonial-quote { 
+		    font-size: 16px; 
+		    color: #333; 
+		    line-height: 1.8; 
+		    margin-bottom: 20px; 
+		    display: flex; 
+		    align-items: center; 
+		    justify-content: center; 
+		} 
+		 
+		 
+		.student-info { 
+		    display: flex; 
+		    align-items: center; 
+		    flex-direction: column; 
+		    margin-top: 20px; 
+		    margin-left: 40%; 
+		} 
+		 
+		.student-image { 
+		    border-radius: 50%; 
+		    width: 150px; 
+		    height: 150px; 
+		    margin-bottom: 10px; 
+		} 
+		 
+		.student-details { 
+		    display: flex; 
+		    flex-direction: column; 
+		    text-align: center; 
+		} 
+		 
+		.student-name { 
+		    font-size: 18px; 
+		    font-weight: bold; 
+		    margin-bottom: 5px; 
+		} 
+		 
+		.student-course { 
+		    font-size: 14px; 
+		    color: #888; 
+		} 
+		 
+		.carousel-controls { 
+		    position: absolute; 
+		    top: 50%; 
+		    transform: translateY(-50%); 
+		    display: flex; 
+		    justify-content: space-between; 
+		    width: 100%; 
+		    pointer-events: none; 
+		} 
+		 
+		.prev-btn, 
+		.next-btn { 
+		    pointer-events: auto; 
+		    background-color: #ff3f3f; 
+		    color: white; 
+		    border: none; 
+		    padding: 10px; 
+		    border-radius: 5px; 
+		    cursor: pointer; 
+		    font-size: 18px; 
+		    margin: 0 10px; 
+		    transition: background-color 0.3s ease; 
+		} 
+		 
+		.next-btn { 
+		    background-color: #5e87ff; 
+		} 
+		 
+		.prev-btn:hover, 
+		.next-btn:hover { 
+		    opacity: 0.8; 
+		} 
+		 
+		/* testimonial ends  */
+	</style>
 </head>
 
 <body>
@@ -24,83 +172,102 @@
     <!-- testimonial section -->
     <br>
     <br>
-    <div style="text-align: center;">
-        <h1
-            style="color: rgb(67, 10, 253); font-weight: bold; border-bottom: 2px dashed rgb(67, 10, 253); display: inline-block; padding-bottom: 5px;">
-            Testimonial
-        </h1>
-    </div>
-    <div class="testimonial-section">
-        <div class="testimonial-text">
+	<div class="testimonial-header">
+		<div style="text-align: center;">
+					        <h1
+					            style="color: rgb(67, 10, 253); font-weight: bold; border-bottom: 2px dashed rgb(67, 10, 253); display: inline-block; padding-bottom: 5px;">
+					            Testimonial
+					        </h1>
+					    </div>
+	</div>
+	<div class="testimonial-section">
+	    <div class="testimonial-text">
+	        <h2 class="testimonial-heading">What Our Students Say</h2>
+	        <p class="testimonial-description">
+	            "Our University Management System has transformed the way we learn and interact with faculty. The seamless access to course materials, the ability to track our progress in real-time, and the convenience of managing all our academic activities online have made our educational experience incredibly efficient and enjoyable. The system’s user-friendly interface and robust features have not only enhanced our learning experience but also made us feel more connected to the university community. We highly recommend this system to anyone seeking a modern and effective way to manage their academic journey."
+	        </p>
+	    </div>
+	    <div class="testimonial-carousel">
+	        <div class="carousel-wrapper">
+	            <div class="testimonial-item active">
+	                <p>
+	                    The University Management System has made managing our studies so much easier. It's intuitive, convenient, and keeps everything—from course registration to grades—in one place. It’s truly enhanced our learning experience.
+	                </p>
+	                <div class="student-info">
+	                    <img src="https://thumbs.dreamstime.com/b/happy-indian-student-wearing-eyeglasses-holding-notebooks-showing-thumbs-up-education-concept-portrait-smiling-female-sign-214751456.jpg" alt="Student Image" class="student-image">
+	                    <div class="student-details">
+	                        <p class="student-name">Janvi Gupta</p>
+	                        <p class="student-course">B.Tech</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="testimonial-item">
+	                <p>
+	                    This system has streamlined our entire academic process. From staying on top of assignments to easily connecting with professors, it’s been an invaluable tool. It’s efficient, reliable, and has truly made our university experience smoother and more enjoyable.
+	                </p>
+	                <div class="student-info">
+	                    <img src="https://tse3.mm.bing.net/th?id=OIP.8hAwihO-TvaWvffKHwlQmQHaE8&pid=Api&P=0&h=180" alt="Student Image" class="student-image">
+	                    <div class="student-details">
+	                        <p class="student-name">Anaya Keshri</p>
+	                        <p class="student-course">Law</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="testimonial-item">
+	                <p>
+	                    Using the University Management System has been a breeze. It keeps us organized and informed, making it easy to manage deadlines and coursework. The platform is straightforward and reliable, helping us focus more on learning and less on administrative tasks.
+	                </p>
+	                <div class="student-info">
+	                    <img src="https://img.freepik.com/premium-photo/portrait-smiling-young-college-student-with-books-backpack-against-white-background_662251-2926.jpg?w=2000" alt="Student Image" class="student-image">
+	                    <div class="student-details">
+	                        <p class="student-name">Atharv</p>
+	                        <p class="student-course">B.Com</p>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- Add more testimonial items here if needed -->
+	        </div>
+	        <div class="carousel-controls">
+	            <button class="prev-btn">&lt;</button>
+	            <button class="next-btn">&gt;</button>
+	        </div>
+	    </div>
+	</div>
 
-            <h2 class="testimonial-heading">What Our Students Say</h2>
-            <p class="testimonial-description">
-                "Our University Management System has transformed the way we learn and interact with faculty. The
-                seamless access to course materials, the ability to track our progress in real-time, and the convenience
-                of managing all our academic activities online have made our educational experience incredibly efficient
-                and enjoyable. The system’s user-friendly interface and robust features have not only enhanced our
-                learning experience but also made us feel more connected to the university community. We highly
-                recommend this system to anyone seeking a modern and effective way to manage their academic journey."
-            </p>
-        </div>
-        <div class="testimonial-carousel">
-            <div class="carousel-wrapper">
-                <div class="testimonial-item active">
-                    <p>
-                        The University Management System has made managing our studies so much easier. It's intuitive,
-                        convenient, and keeps everything—from course registration to grades—in one place. It’s truly
-                        enhanced our learning experience.
-                    </p>
-                    <div class="student-info">
-                        <img src="https://thumbs.dreamstime.com/b/happy-indian-student-wearing-eyeglasses-holding-notebooks-showing-thumbs-up-education-concept-portrait-smiling-female-sign-214751456.jpg"
-                            alt="Student Image" class="student-image">
-                        <div class="student-details">
-                            <p class="student-name">Janvi Gupta</p>
-                            <p class="student-course">B.Tech</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <p>
-                        This system has streamlined our entire academic process. From staying on top of assignments to
-                        easily connecting with professors, it’s been an invaluable tool. It’s efficient, reliable, and
-                        has truly made our university experience smoother and more enjoyable.
-                    </p>
-                    <div class="student-info">
-                        <img src="https://tse3.mm.bing.net/th?id=OIP.8hAwihO-TvaWvffKHwlQmQHaE8&pid=Api&P=0&h=180"
-                            alt="Student Image" class="student-image">
-                        <div class="student-details">
-                            <p class="student-name">Anaya Keshri</p>
-                            <p class="student-course">Law</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <p>
-                        Using the University Management System has been a breeze. It keeps us organized and informed,
-                        making it easy to manage deadlines and coursework. The platform is straightforward and reliable,
-                        helping us focus more on learning and less on administrative tasks.
-                    </p>
-                    <div class="student-info">
-                        <img src="https://img.freepik.com/premium-photo/portrait-smiling-young-college-student-with-books-backpack-against-white-background_662251-2926.jpg?w=2000"
-                            alt="Student Image" class="student-image">
-                        <div class="student-details">
-                            <p class="student-name">Atharv </p>
-                            <p class="student-course">B.Com</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more testimonial items here if needed -->
-            </div>
-            <div class="carousel-controls">
-                <button class="prev-btn">&lt;</button>
-                <button class="next-btn">&gt;</button>
-            </div>
-        </div>
-    </div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		    const items = document.querySelectorAll('.testimonial-item');
+		    const prevBtn = document.querySelector('.prev-btn');
+		    const nextBtn = document.querySelector('.next-btn');
+		    let currentIndex = 0;
 
+		    // Function to show the current item and hide others
+		    function showItem(index) {
+		        items.forEach((item, i) => {
+		            if (i === index) {
+		                item.classList.add('active');
+		            } else {
+		                item.classList.remove('active');
+		            }
+		        });
+		    }
 
-    <script src="script.js"></script>
+		    // Show the initial item
+		    showItem(currentIndex);
+
+		    // Add click event to the next button
+		    nextBtn.addEventListener('click', function () {
+		        currentIndex = (currentIndex + 1) % items.length;
+		        showItem(currentIndex);
+		    });
+
+		    // Add click event to the previous button
+		    prevBtn.addEventListener('click', function () {
+		        currentIndex = (currentIndex - 1 + items.length) % items.length;
+		        showItem(currentIndex);
+		    });
+		});
+	</script>
 
     <!-- testimonial section end -->
 
