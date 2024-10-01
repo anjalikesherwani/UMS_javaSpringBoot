@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class AppController {
@@ -34,6 +35,8 @@ public class AppController {
 	 @Autowired
 	 private PaidFeesRepository paidfeesRepository;   // Injecting the paidfeesRepository
 	 
+	 @Autowired
+	 private EmailService emailService;     // Injecting the emailService
 	 
 	@GetMapping("/")
 	public String home() {
@@ -49,10 +52,22 @@ public class AppController {
 	public String about() {
 		return "about";
 	}
+	
+	
 	@GetMapping("/contact")
 	public String contact() {
 		return "contact";
 	}
+	
+	@PostMapping("/sendMail")
+	public String sendMail(@ModelAttribute Email email, HttpSession session) {
+		
+		emailService.sendMail(email);
+		session.setAttribute("message", "Email Send successfully");
+		/* System.out.println("sending mail to: "+ email.getTo()); */
+		return "redirect:/index";
+	}
+	
 	@GetMapping("/StudentTable")
 	public String StudentTable() {
 		return "StudentTable";
@@ -176,7 +191,7 @@ public class AppController {
 	
 	@GetMapping("/student_progress")
 	public String student_progress() {
-		return "myprogress";
+		return "student_progress";
 	}	
 	@GetMapping("/myprogress")
 	public String myprogress() {

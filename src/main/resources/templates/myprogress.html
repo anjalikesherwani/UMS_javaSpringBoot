@@ -65,12 +65,18 @@
         <input type="text" placeholder="Enter Roll Number"
             style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; text-align: center;">
         <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-            <button
-                style="padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white;"
-                onclick="window.location.href='result'">Result</button>
-            <button
-                style="padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; background-color: #6c757d; color: white;"><a
-                    href="index">Back</a></button>
+			<button
+			    style="padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; background-color: #007bff; color: white;"
+			    onclick="redirectToresult()">
+			    Result
+			</button>
+
+			<script>
+			    function redirectToResultPage() {
+			        window.location.href = 'result'; // Adjust the path if necessary
+			    }
+			</script>
+				
         </div>
     </div>
 	</form>
